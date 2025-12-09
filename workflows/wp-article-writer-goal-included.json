@@ -1,0 +1,1066 @@
+{
+  "name": "WP Article writer",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "create-wordpress-post",
+        "formTitle": "Create a WordPress post with AI",
+        "formDescription": "Fill this form with the required information to create a draft post on WordPress",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Keywords (comma-separated)",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Number of chapters",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "1"
+                  },
+                  {
+                    "option": "2"
+                  },
+                  {
+                    "option": "3"
+                  },
+                  {
+                    "option": "4"
+                  },
+                  {
+                    "option": "5"
+                  },
+                  {
+                    "option": "6"
+                  },
+                  {
+                    "option": "7"
+                  },
+                  {
+                    "option": "8"
+                  },
+                  {
+                    "option": "9"
+                  },
+                  {
+                    "option": "10"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Max words count",
+              "fieldType": "number",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Article Goal / Purpose"
+            }
+          ]
+        },
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "e4c9cecb-7cf2-4d1f-9ba3-18767f9133b5",
+      "name": "Form",
+      "type": "n8n-nodes-base.formTrigger",
+      "position": [
+        64,
+        192
+      ],
+      "webhookId": "4b937814-e829-4df7-aaba-31192babf7e1",
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "content": "## Data check",
+        "height": 371.765663140765,
+        "width": 301.3874093724939,
+        "color": 4
+      },
+      "id": "85d1cca3-3e86-48fc-ab7a-e924d6fc84ad",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        864,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "Checks that the data returned by OpenAI is correct",
+        "height": 80,
+        "width": 272.8190508599808,
+        "color": 7
+      },
+      "id": "cdc3e51c-f694-4c52-b4b9-3f3005ccaa01",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        880,
+        64
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Draft on WordPress",
+        "height": 371.7656631407652,
+        "width": 282.3398199598652,
+        "color": 5
+      },
+      "id": "d15953af-26ae-4268-a7af-2b7c7c4f38bb",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2224,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "The article is posted as a draft on WordPress",
+        "height": 80,
+        "width": 254.77269221373095,
+        "color": 7
+      },
+      "id": "ee1f856e-6acc-4bd2-883a-29ab6b527177",
+      "name": "Sticky Note9",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2240,
+        64
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Featured image",
+        "height": 369,
+        "width": 862,
+        "color": 3
+      },
+      "id": "9b06ffcd-3472-4437-8fb0-8d67976d90a2",
+      "name": "Sticky Note10",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2528,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "The image is generated with Dall-E, uploaded to WordPress, and then connected to the post as its featured image",
+        "height": 80,
+        "width": 517.9195082760601,
+        "color": 7
+      },
+      "id": "c198c4a6-2838-4563-85a1-93e054fce678",
+      "name": "Sticky Note11",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2544,
+        64
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "Starting from the given keywords, generates the article title, subtitle, chapters, and image prompt",
+        "height": 80,
+        "width": 287.370178643191,
+        "color": 7
+      },
+      "id": "2d3f307a-bf66-4121-bf47-7c3af2c28a7e",
+      "name": "Sticky Note12",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        528,
+        64
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Article structure",
+        "height": 370.512611879577,
+        "width": 319.697690939268,
+        "color": 6
+      },
+      "id": "d5f19ca9-3a3d-4dcb-a05d-0f66107e1b72",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        512,
+        16
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## User form",
+        "height": 370.512611879577,
+        "width": 239.97343293577688,
+        "color": 7
+      },
+      "id": "240d4a65-78e9-4640-b0f3-9061b7c534d4",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        0,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "The user triggers the post creation",
+        "height": 80,
+        "width": 199.7721486302032,
+        "color": 7
+      },
+      "id": "c638782f-99d4-4784-a93e-5c723fec326e",
+      "name": "Sticky Note13",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        32,
+        64
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## User feedback",
+        "height": 370.512611879577,
+        "width": 219.70753707029849,
+        "color": 7
+      },
+      "id": "c6127cc2-2484-40ec-86f6-8f1646724d26",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3424,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "Final confirmation to the user",
+        "height": 80,
+        "width": 183.38125554060056,
+        "color": 7
+      },
+      "id": "00a31738-ff52-435d-a169-a76a9c365308",
+      "name": "Sticky Note14",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3456,
+        64
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUser is notified to try again since some data is missing",
+        "height": 288.4116890365125,
+        "width": 281.2716777103785,
+        "color": 7
+      },
+      "id": "8190f1d4-6990-463b-bc34-f0e87da9c80c",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1184,
+        400
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "3a433b0f-9957-4b64-ad81-359ab5e521d5",
+              "name": "wordpress_url",
+              "type": "string",
+              "value": "https://hoccotech.com/"
+            },
+            {
+              "id": "ec5430e3-92c5-46e4-8c2c-c87291680892",
+              "name": "keywords",
+              "type": "string",
+              "value": "={{ $json['Keywords (comma-separated)'] }}"
+            },
+            {
+              "id": "5defb0a2-d921-4909-b10d-da59e1768496",
+              "name": "chapters",
+              "type": "number",
+              "value": "={{ $json['Number of chapters'] }}"
+            },
+            {
+              "id": "230ebd0b-73c2-4265-9b3c-57af7fbc48c8",
+              "name": "words",
+              "type": "number",
+              "value": "={{ $json['Max words count'] }}"
+            },
+            {
+              "id": "92a5e298-f69b-4764-83a7-f7fd9f464cc2",
+              "name": "goal",
+              "value": "={{ $json[\"Article Goal / Purpose\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "51c7d12c-014f-4d1b-af84-c0a7c83f43e3",
+      "name": "Settings",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        320,
+        192
+      ],
+      "typeVersion": 3.3
+    },
+    {
+      "parameters": {
+        "content": "## Settings",
+        "height": 370.512611879577,
+        "width": 226.71615243495023,
+        "color": 2
+      },
+      "id": "c0c1a819-b953-4a9a-813e-26cfba4db2fc",
+      "name": "Sticky Note8",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        272,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "https://hoccotech.com",
+        "height": 80,
+        "width": 179.37633247508526,
+        "color": 7
+      },
+      "id": "83e75e2f-174f-4be8-b4a2-22d9d8e0d323",
+      "name": "Sticky Note15",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        288,
+        64
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "9c8c53ea-6079-48da-9d6e-dd527167b123",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.message.content.title }}",
+              "rightValue": ""
+            },
+            {
+              "id": "a7fabfe1-3539-453a-93d9-8d6d395c3de4",
+              "operator": {
+                "type": "array",
+                "operation": "lengthGte",
+                "rightType": "number"
+              },
+              "leftValue": "={{ $json.message.content.chapters }}",
+              "rightValue": "={{ 1 }}"
+            },
+            {
+              "id": "a687081e-24e2-423c-a2da-b7c18baf0715",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{$json.message.content.subtitle}}",
+              "rightValue": ""
+            },
+            {
+              "id": "0a435a69-3699-4b98-b46f-40954c7a7816",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{$json.message.content.introduction}}",
+              "rightValue": ""
+            },
+            {
+              "id": "1a440144-21f3-42bd-9222-774bd564f3ef",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{$json.message.content.conclusions}}",
+              "rightValue": ""
+            },
+            {
+              "id": "834ce92d-b1e9-48ef-ae63-1d0841c900b5",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{$json.message.content.imagePrompt}}",
+              "rightValue": ""
+            },
+            {
+              "id": "8200c512-14fe-4de7-b96a-b1c824fbcca1",
+              "leftValue": "={{ ($json.message.content.meta_title || '').length }}",
+              "rightValue": 60,
+              "operator": {
+                "type": "number",
+                "operation": "lte"
+              }
+            },
+            {
+              "id": "24eb8621-e85b-498b-80b4-ee7ec87a8cf6",
+              "leftValue": "={{ ($json.message.content.meta_description || '').length }}",
+              "rightValue": 150,
+              "operator": {
+                "type": "number",
+                "operation": "lte"
+              }
+            },
+            {
+              "id": "ba0d9c01-a310-406b-93b6-2b5c442e7247",
+              "leftValue": "={{ String($json.message.content.slug || '').trim() }}\n",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "regex"
+              }
+            },
+            {
+              "id": "0ca9db26-423b-43fd-b360-a9046b3e04c0",
+              "leftValue": "={{ Array.isArray($json.message.content.lsi_keywords) ? $json.message.content.lsi_keywords.length : 0 }}",
+              "rightValue": 5,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "72dd7491-2f48-45c9-b477-45154856b751",
+      "name": "Check data consistency",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        944,
+        192
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "message.content.chapters",
+        "options": {}
+      },
+      "id": "72b2cbb8-7bfb-4b79-aeb6-007f44efad45",
+      "name": "Split out chapters",
+      "type": "n8n-nodes-base.splitOut",
+      "position": [
+        1248,
+        192
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combinationMode": "mergeByPosition",
+        "options": {
+          "includeUnpaired": true
+        }
+      },
+      "id": "b71f210a-8396-4bb9-9f2d-95e171d40af7",
+      "name": "Merge chapters title and text",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        1872,
+        320
+      ],
+      "typeVersion": 2.1
+    },
+    {
+      "parameters": {
+        "jsCode": "// ---------- Helpers ----------\nfunction detectLangFromKeyword(kw) {\n  const s = String(kw || \"\");\n  // Arabic script (covers Arabic/Persian/Urdu…)\n  if (/[\\u0600-\\u06FF]/.test(s)) {\n    // Persian-specific letters\n    if (/[گچپژک‌ی]/.test(s) || /[\\u06A9\\u06AF\\u067E\\u0686\\u0698\\u06CC]/.test(s)) return \"fa\";\n    return \"ar\";\n  }\n  // Turkish special letters\n  if (/[çğıöşüİı]/i.test(s)) return \"tr\";\n  // German umlauts / ß\n  if (/[äöüß]/i.test(s)) return \"de\";\n  // fallback for other Latin languages → treat as English style\n  return \"en\";\n}\nfunction ensureHtmlParagraphs(s) {\n  if (!s) return \"\";\n  const trimmed = String(s).trim();\n  if (!trimmed) return \"\";\n  if (!/^<\\w+/i.test(trimmed)) return `<p>${trimmed}</p>`;\n  return trimmed;\n}\nfunction esc(text) {\n  return String(text ?? \"\").replace(/</g,\"&lt;\").replace(/>/g,\"&gt;\");\n}\nfunction stripHtml(html) {\n  return String(html || \"\").replace(/<[^>]+>/g, \" \").replace(/\\s+/g, \" \").trim();\n}\nfunction makeExcerpt(text, max=155) {\n  const t = stripHtml(text);\n  if (t.length <= max) return t;\n  const cut = t.slice(0, max);\n  const lastDot = cut.lastIndexOf(\".\");\n  if (lastDot > 60) return cut.slice(0, lastDot + 1);\n  const lastSpace = cut.lastIndexOf(\" \");\n  return (lastSpace > 50 ? cut.slice(0, lastSpace) : cut).trim() + \"…\";\n}\nfunction hasContent(html) {\n  if (!html) return false;\n  const t = String(html).replace(/\\s+/g,' ').trim();\n  return /<(p|ul|ol|table|blockquote|img|a|h3|h4)\\b/i.test(t) || /[A-Za-z0-9]/.test(t);\n}\nfunction normalizeHeadings(html) {\n  if (!html) return \"\";\n  return String(html)\n    .replace(/<\\s*h1\\b[^>]*>/gi, \"<h3>\")\n    .replace(/<\\s*\\/\\s*h1\\s*>/gi, \"</h3>\")\n    .replace(/<\\s*h2\\b[^>]*>/gi, \"<h3>\")\n    .replace(/<\\s*\\/\\s*h2\\s*>/gi, \"</h3>\");\n}\nfunction escapeRegExp(s){ return String(s).replace(/[.*+?^${}()|[\\]\\\\]/g, \"\\\\$&\"); }\n\n// ---------- Fetch plan ----------\nconst plan = $('Create post title and structure').first().json?.message?.content || {};\nconst lsi = Array.isArray(plan.lsi_keywords) ? plan.lsi_keywords : [];\n\n// Detect language/locale from keyword for date & labels\nlet focusKW = \"\";\ntry {\n  const ks = $('Settings').item.json.keywords;\n  focusKW = Array.isArray(ks) ? (ks[0] || \"\") : (ks || \"\");\n} catch(e){}\nconst lang = detectLangFromKeyword(focusKW);\nconst localeMap = { fa: \"fa-IR\", ar: \"ar\", tr: \"tr-TR\", de: \"de-DE\", en: \"en-US\" };\nconst locale = localeMap[lang] || \"en-US\";\n\n// Localized \"last updated\" labels\nconst updatedLabel = {\n  en: \"This article was last updated on\",\n  fa: \"این مقاله در تاریخ\",\n  ar: \"تم تحديث هذه المقالة في\",\n  tr: \"Bu makale şu tarihte güncellendi:\",\n  de: \"Dieser Artikel wurde aktualisiert am\"\n};\n\n// Precompute the formatted updated date (once)\nconst updated = new Date();\nconst isoDate = updated.toISOString().split(\"T\")[0]; // YYYY-MM-DD\nconst humanDate = new Intl.DateTimeFormat(locale, { year: \"numeric\", month: \"long\", day: \"numeric\" }).format(updated);\n\nlet out = \"\";\nlet faqSchemas = [];\nconst seenTables = new Set();\n\n// Metadata as comment (not shown)\nout += `<!--\nmeta_title: ${esc(plan.meta_title || \"\")}\nmeta_description: ${esc(plan.meta_description || \"\")}\nslug: ${esc(plan.slug || \"\")}\nlsi_keywords: ${Array.isArray(lsi) ? lsi.join(\", \") : \"\"}\n-->`;\n\n// ---- DATE FIRST (before intro) ----\nout += `\\n<p><em>${updatedLabel[lang] || updatedLabel.en} <time datetime=\"${isoDate}\">${humanDate}</time>.</em></p>\\n`;\n\n// Intro (starts after date)\nout += ensureHtmlParagraphs(plan.introduction) + \"\\n\";\n\n// Chapters from Merge node input\nconst chapters = $input.all();\nchapters.forEach((item) => {\n  const rawTitle = (item.json?.title || \"\").trim();\n  let body  = (item.json?.content || item.json?.message?.content || \"\").trim();\n\n  body = normalizeHeadings(body);\n\n  // Extract FAQ JSON-LD scripts from body (keep body visible, only remove scripts)\n  const schemaRe = /<script\\s+type=[\"']application\\/ld\\+json[\"']\\s*>([\\s\\S]*?)<\\/script>/gi;\n  let m;\n  while ((m = schemaRe.exec(body)) !== null) {\n    const raw = (m[1] || \"\").trim();\n    if (raw) faqSchemas.push(raw);\n  }\n  body = body.replace(schemaRe, \"\");\n\n  // Deduplicate TablePress shortcodes\n  body = body.replace(/\\[table\\s+id\\s*=\\s*(\\d+)\\s*\\/\\s*\\]/gi, (full, id) => {\n    const key = String(id);\n    if (seenTables.has(key)) return \"\";\n    seenTables.add(key);\n    return full;\n  });\n\n  if (!hasContent(body)) body = `<p></p>`;\n  if (rawTitle) out += `\\n<h2>${esc(rawTitle)}</h2>\\n`;\n  out += ensureHtmlParagraphs(body) + \"\\n\";\n});\n\n// Conclusions\nout += `\\n<h2>Conclusions</h2>\\n`;\nout += ensureHtmlParagraphs(plan.conclusions);\n\n// Append only ONE FAQ JSON-LD at the end (prefer the longest)\nif (faqSchemas.length) {\n  faqSchemas.sort((a,b)=>b.length - a.length);\n  out += `\\n<script type=\"application/ld+json\">\\n${faqSchemas[0]}\\n</script>\\n`;\n} else {\n  // ---------- Fallback: build FAQ JSON-LD from visible FAQ section (if present) ----------\n  const faqSecRe = /<h2[^>]*>(.*?)<\\/h2>\\s*([\\s\\S]*?)(?=<h2\\b|$)/gi;\n  let faqBlock = \"\";\n  let m2;\n  while ((m2 = faqSecRe.exec(out)) !== null) {\n    const h2 = (m2[1] || \"\").toLowerCase();\n    if (/(faq|سوالات متداول|پرسش‌های متداول)/i.test(h2)) {\n      faqBlock = m2[2] || \"\";\n      break;\n    }\n  }\n  if (faqBlock) {\n    const qRe = /<h3[^>]*>([\\s\\S]*?)<\\/h3>\\s*([\\s\\S]*?)(?=<h3\\b|$)/gi;\n    const entities = [];\n    let mq;\n    while ((mq = qRe.exec(faqBlock)) !== null) {\n      const q = mq[1].replace(/<[^>]+>/g, \"\").trim();\n      const block = mq[2] || \"\";\n      const aMatch = block.match(/<p[^>]*>([\\s\\S]*?)<\\/p>/i);\n      const a = aMatch ? aMatch[1].trim() : block.replace(/<[^>]+>/g, \" \").trim();\n      if (q && a) {\n        entities.push({\n          \"@type\": \"Question\",\n          \"name\": q,\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": a\n          }\n        });\n      }\n    }\n    if (entities.length) {\n      const schema = {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"FAQPage\",\n        \"mainEntity\": entities\n      };\n      out += `\\n<script type=\"application/ld+json\">\\n${JSON.stringify(schema)}\\n</script>\\n`;\n    }\n  }\n}\n\n// -------- External links: cap at 3, keep first 2 DOFOLLOW (remove nofollow), add noopener --------\n(function limitExternalLinks() {\n  const anchorRe = /<a\\b([^>]*?)href\\s*=\\s*[\"']([^\"']+)[\"']([^>]*)>([\\s\\S]*?)<\\/a>/gi;\n  let match, result = \"\", lastIndex = 0;\n  let externalCount = 0, dofollowCount = 0;\n\n  function cleanRel(attrs, {nofollow, noopener}) {\n    let a = attrs || \"\";\n    const relRe = /rel\\s*=\\s*[\"']([^\"']*)[\"']/i;\n    if (relRe.test(a)) {\n      a = a.replace(relRe, (_m, val) => {\n        const set = new Set(val.split(/\\s+/).filter(Boolean));\n        if (nofollow) set.add(\"nofollow\"); else set.delete(\"nofollow\");\n        if (noopener) set.add(\"noopener\"); else set.delete(\"noopener\");\n        const relStr = Array.from(set).join(' ');\n        return relStr ? `rel=\"${relStr}\"` : '';\n      }).replace(/\\s{2,}/g,' ').trim();\n    } else {\n      const parts = [];\n      if (nofollow) parts.push(\"nofollow\");\n      if (noopener) parts.push(\"noopener\");\n      if (parts.length) a = `${a} rel=\"${parts.join(' ')}\"`;\n    }\n    return a.trim();\n  }\n\n  while ((match = anchorRe.exec(out)) !== null) {\n    const [full, preAttr, href, postAttr, inner] = match;\n    const start = match.index;\n    const end = anchorRe.lastIndex;\n\n    result += out.slice(lastIndex, start);\n\n    const isHttp = /^https?:\\/\\//i.test(href);\n    const isExternal = isHttp;\n\n    if (!isExternal) {\n      result += full; // keep internal\n    } else {\n      externalCount += 1;\n      if (externalCount > 3) {\n        result += inner; // unwrap extra externals\n      } else {\n        let attrs = (preAttr + \" \" + postAttr).trim();\n        if (dofollowCount < 2) {\n          attrs = cleanRel(attrs, {nofollow:false, noopener:true});\n          dofollowCount += 1;\n        } else {\n          attrs = cleanRel(attrs, {nofollow:true, noopener:true});\n        }\n        const space = attrs ? \" \" : \"\";\n        result += `<a${space}${attrs} href=\"${href}\">${inner}</a>`;\n      }\n    }\n\n    lastIndex = end;\n  }\n  result += out.slice(lastIndex);\n  out = result;\n})();\n\n// -------- Ensure at least 2 INTERNAL links (relative) with localized labels --------\n(function ensureInternalLinks(){\n  const internalCount = (out.match(/<a\\b[^>]*href\\s*=\\s*[\"'](\\/(?!\\/)|#)[^\"']*[\"'][^>]*>/gi) || []).length;\n  if (internalCount >= 2) return;\n\n  const anchors = {\n    en: [\n      `<a href=\"/services/\">our services</a>`,\n      `<a href=\"/contact/\">contact our team</a>`,\n      `<a href=\"/portfolio/\">recent projects</a>`\n    ],\n    fa: [\n      `<a href=\"/services/\">خدمات ما</a>`,\n      `<a href=\"/contact/\">تماس با تیم ما</a>`,\n      `<a href=\"/portfolio/\">نمونه‌کارها</a>`\n    ],\n    ar: [\n      `<a href=\"/services/\">خدماتنا</a>`,\n      `<a href=\"/contact/\">تواصل مع فريقنا</a>`,\n      `<a href=\"/portfolio/\">أعمالنا الأخيرة</a>`\n    ],\n    tr: [\n      `<a href=\"/services/\">hizmetlerimiz</a>`,\n      `<a href=\"/contact/\">ekibimizle iletişime geçin</a>`,\n      `<a href=\"/portfolio/\">son projeler</a>`\n    ],\n    de: [\n      `<a href=\"/services/\">unsere Leistungen</a>`,\n      `<a href=\"/contact/\">Kontakt zum Team</a>`,\n      `<a href=\"/portfolio/\">aktuelle Projekte</a>`\n    ]\n  };\n  const texts = {\n    en: (list) => `<p>For further guidance, explore ${list}.</p>\\n`,\n    fa: (list) => `<p>برای راهنمایی بیشتر، ${list} را ببینید.</p>\\n`,\n    ar: (list) => `<p>للمزيد من الإرشادات، اطلع على ${list}.</p>\\n`,\n    tr: (list) => `<p>Daha fazla bilgi için ${list} bağlantılarına göz atın.</p>\\n`,\n    de: (list) => `<p>Für weitere Informationen besuchen Sie bitte ${list}.</p>\\n`\n  };\n  const joiner = (lang === \"fa\" || lang === \"ar\") ? \" و \" : (lang === \"de\" ? \" und \" : \" and \");\n\n  const list = anchors[lang] || anchors.en;\n  const needed = Math.max(0, 2 - internalCount);\n  const add = list.slice(0, needed);\n  if (!add.length) return;\n\n  const para = (texts[lang] || texts.en)(add.join(joiner));\n  if (/<h2>Conclusions<\\/h2>/i.test(out)) {\n    out = out.replace(/<h2>Conclusions<\\/h2>/i, para + \"<h2>Conclusions</h2>\");\n  } else {\n    out += para;\n  }\n})();\n\n// -------- Keyword Density Enforcer (post-processing, target ~1.2–1.8%) with localization --------\n(function enforceDensity(){\n  let focus = \"\";\n  try {\n    const ks = $('Settings').item.json.keywords;\n    focus = Array.isArray(ks) ? (ks[0] || \"\") : (ks || \"\");\n  } catch(e) {}\n  focus = String(focus || \"\").trim();\n  if (!focus) return;\n\n  const lang2 = detectLangFromKeyword(focus);\n\n  const stripForDensity = (html) => String(html || \"\")\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, \"\")\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, \"\")\n    .replace(/<[^>]+>/g, \" \")\n    .replace(/\\s+/g, \" \")\n    .trim();\n\n  const kwRe = new RegExp(`\\\\b${escapeRegExp(focus)}\\\\b`, \"gi\");\n\n  const tails = {\n    en: [\n      ` This directly supports ${focus}.`,\n      ` Practical step toward ${focus}.`,\n      ` Helpful for ${focus} results.`,\n      ` A smart move for ${focus}.`\n    ],\n    fa: [\n      ` این کار مستقیماً به ${focus} کمک می‌کند.`,\n      ` این رویکرد رسیدن به ${focus} را سریع‌تر می‌کند.`,\n      ` این اقدام بهبود ${focus} را به‌دنبال دارد.`,\n      ` این روش با بهترین‌روش‌های ${focus} هماهنگ است.`\n    ],\n    ar: [\n      ` هذا الإجراء يدعم ${focus} مباشرةً.`,\n      ` هذا النهج يسرّع الوصول إلى ${focus}.`,\n      ` هذه الخطوة تفيد ${focus} مباشرة.`,\n      ` هذا الأسلوب يتماشى مع أفضل ممارسات ${focus}.`\n    ],\n    tr: [\n      ` Bu adım doğrudan ${focus}’u destekler.`,\n      ` Bu yaklaşım ${focus} sürecini hızlandırır.`,\n      ` Bu uygulama ${focus} için doğrudan faydalıdır.`,\n      ` Bu yöntem ${focus} en iyi uygulamalarıyla uyumludur.`\n    ],\n    de: [\n      ` Dies unterstützt ${focus} direkt.`,\n      ` Dieser Ansatz beschleunigt ${focus}.`,\n      ` Diese Maßnahme kommt ${focus} direkt zugute.`,\n      ` Diese Methode entspricht den Best Practices für ${focus}.`\n    ]\n  };\n\n  const bridges = {\n    en: [\n      ` In practice, this improves ${focus}.`,\n      ` This approach accelerates ${focus}.`,\n      ` It directly benefits ${focus}.`,\n      ` It aligns with ${focus} best practices.`\n    ],\n    fa: [\n      ` در عمل، این موضوع ${focus} را بهبود می‌دهد.`,\n      ` این رویکرد سرعت دستیابی به ${focus} را افزایش می‌دهد.`,\n      ` این اقدام مستقیماً به ${focus} سود می‌رساند.`,\n      ` این روش با بهترین‌روش‌های ${focus} هم‌راستا است.`\n    ],\n    ar: [\n      ` عمليًا، هذا يُحسّن ${focus}.`,\n      ` هذا النهج يسرّع تحقيق ${focus}.`,\n      ` يفيد هذا الإجراء ${focus} مباشرة.`,\n      ` يتماشى ذلك مع أفضل ممارسات ${focus}.`\n    ],\n    tr: [\n      ` Uygulamada bu, ${focus}’u iyileştirir.`,\n      ` Bu yaklaşım ${focus} hedefini hızlandırır.`,\n      ` Bu hamle ${focus} için doğrudan fayda sağlar.`,\n      ` Bu yöntem ${focus} en iyi uygulamalarıyla uyumludur.`\n    ],\n    de: [\n      ` In der Praxis verbessert dies ${focus}.`,\n      ` Dieser Ansatz beschleunigt ${focus}.`,\n      ` Dies kommt ${focus} direkt zugute.`,\n      ` Dies entspricht den Best Practices für ${focus}.`\n    ]\n  };\n\n  function ensureInFirstAndLastParagraph(html, kw) {\n    const pRe = /<p[^>]*>[\\s\\S]*?<\\/p>/gi;\n    const ps = html.match(pRe) || [];\n    const strip = (h)=>String(h||\"\").replace(/<[^>]+>/g,\" \").replace(/\\s+/g,\" \").trim();\n    const hasKW = (t) => new RegExp(`\\\\b${escapeRegExp(kw)}\\\\b`, \"i\").test(strip(t));\n    function addAtEnd(p) {\n      const arr = tails[lang2] || tails.en;\n      const addon = arr[Math.floor(Math.random() * arr.length)];\n      return p.replace(/<\\/p>\\s*$/i, `${addon}</p>`);\n    }\n    if (ps.length) {\n      if (!hasKW(ps[0])) ps[0] = addAtEnd(ps[0]);\n      if (!hasKW(ps[ps.length - 1])) ps[ps.length - 1] = addAtEnd(ps[ps.length - 1]);\n      let i = 0;\n      return html.replace(pRe, () => ps[i++]);\n    }\n    return html;\n  }\n\n  const text = stripHtml(out);\n  const words = text ? text.split(/\\s+/).length : 0;\n  if (!words) return;\n  const currentCount = (text.match(kwRe) || []).length;\n\n  const minTarget = 0.012; // 1.2%\n  const maxTarget = 0.018; // 1.8%\n\n  if ((currentCount / Math.max(words, 1)) < minTarget) {\n    out = ensureInFirstAndLastParagraph(out, focus);\n\n    let txt = stripHtml(out);\n    let count = (txt.match(kwRe) || []).length;\n    let needed = Math.ceil(minTarget * words) - count;\n    const hardCap = Math.floor(maxTarget * words) - count;\n    needed = Math.min(needed, Math.max(0, hardCap));\n    if (needed <= 0) return;\n\n    const pRe = /<p([^>]*)>([\\s\\S]*?)<\\/p>/gi;\n    out = out.replace(pRe, (full, attrs, inner) => {\n      if (needed <= 0) return full;\n      const isSnippet = /class=[\"']answer-snippet[\"']/i.test(attrs);\n      const hasKW = kwRe.test(stripHtml(inner));\n      kwRe.lastIndex = 0;\n      if (!isSnippet && !hasKW) {\n        const arr = bridges[lang2] || bridges.en;\n        const add = arr[Math.floor(Math.random() * arr.length)];\n        needed--;\n        return `<p${attrs}>${inner}${add}</p>`;\n      }\n      return full;\n    });\n  }\n})();\n\n// -------- Build meta_description & excerpt with Goal-aware CTA (ENFORCER) --------\nlet metaDesc = (plan.meta_description || \"\").trim();\n\n// pull goal + lang + main keyword\nlet goal = \"\";\ntry { goal = String($('Settings').item.json.goal || \"\").trim(); } catch(e){}\nlet focus = \"\";\ntry {\n  const ks = $('Settings').item.json.keywords;\n  focus = Array.isArray(ks) ? (ks[0] || \"\") : (ks || \"\");\n} catch(e) {}\nfocus = String(focus || \"\").trim();\n\nconst langForMeta = detectLangFromKeyword(focus);\n\n// Localized CTA snippets by GOAL (short)\nconst CTA_MAP = {\n  en: {\n    educational: \"Learn more inside.\",\n    commercial: \"Get a free consultation.\",\n    local: \"Let’s grow locally—contact us.\",\n    comparative: \"Compare options and choose smart.\",\n    thought: \"Explore expert insights.\"\n  },\n  fa: {\n    educational: \"جزئیات بیشتر را بخوانید.\",\n    commercial: \"مشاوره رایگان دریافت کنید.\",\n    local: \"برای رشد محلی با ما در تماس باشید.\",\n    comparative: \"مقایسه کنید و بهترین را انتخاب کنید.\",\n    thought: \"دیدگاه‌های تخصصی را بخوانید.\"\n  },\n  ar: {\n    educational: \"تعرّف على المزيد.\",\n    commercial: \"احصل على استشارة مجانية.\",\n    local: \"لننمو محليًا—تواصل معنا.\",\n    comparative: \"قارن واختر بذكاء.\",\n    thought: \"اكتشف رؤى الخبراء.\"\n  },\n  tr: {\n    educational: \"Daha fazlasını keşfedin.\",\n    commercial: \"Ücretsiz danışmanlık alın.\",\n    local: \"Yerelde büyüyelim—iletişime geçin.\",\n    comparative: \"Seçenekleri karşılaştırın.\",\n    thought: \"Uzman görüşlerini inceleyin.\"\n  },\n  de: {\n    educational: \"Mehr erfahren.\",\n    commercial: \"Kostenlose Beratung erhalten.\",\n    local: \"Lokal wachsen—kontaktieren Sie uns.\",\n    comparative: \"Optionen vergleichen, klug wählen.\",\n    thought: \"Experten-Insights entdecken.\"\n  }\n};\n\n// Map goal text to a key\nfunction normalizeGoal(g) {\n  const s = (g || \"\").toLowerCase();\n  if (/educational|informative|آموزشی|bilgilendir|lernen|تعليمي/.test(s)) return \"educational\";\n  if (/commercial|lead|conversion|تبلیغ|تجاری|lead|müşteri|verkauf/.test(s)) return \"commercial\";\n  if (/local/.test(s) || /محلی|lokal|yerel|lokal/i.test(s)) return \"local\";\n  if (/compar/i.test(s) || /تحلی|مقایسه|karşılaştır|vergleich/.test(s)) return \"comparative\";\n  if (/thought|leader|رهبری فکری|fikir liderliği|vordenker/.test(s)) return \"thought\";\n  return \"educational\"; // fallback\n}\n\nconst goalKey = normalizeGoal(goal);\nconst ctas = CTA_MAP[langForMeta] || CTA_MAP.en;\nconst goalCTA = ctas[goalKey] || CTA_MAP.en.educational;\n\n// base if missing\nif (!metaDesc) {\n  const base = makeExcerpt(`${stripHtml(plan.introduction || \"\")}`, 110);\n  metaDesc = base ? base : (focus ? `About ${focus}.` : \"\");\n}\n\n// ensure keyword appears at least once\n(function ensureKWInMeta(){\n  if (!focus) return;\n  const re = new RegExp(`\\\\b${escapeRegExp(focus)}\\\\b`, \"i\");\n  if (!re.test(metaDesc)) {\n    metaDesc = `${metaDesc} — ${focus}`;\n  }\n})();\n\n// attach goal CTA and enforce <=150 chars\n(function attachCTA(){\n  const maybeHasCTA = new RegExp(escapeRegExp(goalCTA.replace(/[.*+?^${}()|[\\]\\\\]/g, \"\\\\$&\")), \"i\").test(metaDesc);\n  let candidate = maybeHasCTA ? metaDesc : `${metaDesc} ${goalCTA}`;\n  metaDesc = makeExcerpt(candidate, 150);\n})();\n\nconst excerpt = makeExcerpt(metaDesc, 160); // safe for %excerpt%\n\n// Output with extra fields for WP mapping\nreturn [{\n  json: {\n    article: out,\n    title: plan.title || \"\",\n    slug: plan.slug || \"\",\n    meta_title: plan.meta_title || \"\",\n    meta_description: metaDesc,\n    excerpt: excerpt,\n    // Optional helper for direct meta mapping to popular SEO plugins:\n    seo: {\n      yoast: {\n        _yoast_wpseo_title: plan.meta_title || \"\",\n        _yoast_wpseo_metadesc: metaDesc\n      },\n      rankmath: {\n        rank_math_title: plan.meta_title || \"\",\n        rank_math_description: metaDesc\n      }\n    }\n  }\n}];\n"
+      },
+      "id": "3ec54f18-1303-4876-8e2c-d7d186f6ab08",
+      "name": "Final article text",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        2048,
+        192
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "title": "={{ $('Create post title and structure').first().json.message.content.meta_title }}",
+        "additionalFields": {
+          "content": "={{ $json.article }}",
+          "slug": "={{ $('Create post title and structure').first().json.message.content.slug }}",
+          "status": "draft"
+        }
+      },
+      "id": "d5d544a7-1765-4199-8f0f-d815d14552d3",
+      "name": "Post on Wordpress",
+      "type": "n8n-nodes-base.wordpress",
+      "position": [
+        2320,
+        192
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "wordpressApi": {
+          "id": "QwVjLimOHcNrIgL9",
+          "name": "Wordpress account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"Settings\"].json.wordpress_url.replace(/\\/$/,'') + \"/wp-json/wp/v2/media\" }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"example.jpg\""
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "options": {}
+      },
+      "id": "64405788-2b8d-405a-ac9f-3f56349dd86f",
+      "name": "Upload media",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        2816,
+        192
+      ],
+      "typeVersion": 4.1,
+      "credentials": {
+        "wordpressApi": {
+          "id": "QwVjLimOHcNrIgL9",
+          "name": "Wordpress account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"Settings\"].json.wordpress_url.replace(/\\/$/,'') + \"/wp-json/wp/v2/posts/\" + $node[\"Post on Wordpress\"].json.id }}\n",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "featured_media",
+              "value": "={{ $json.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b6778e63-39c9-4c06-8717-5a1a57a89657",
+      "name": "Set image ID for the post",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        3200,
+        192
+      ],
+      "typeVersion": 4.1,
+      "credentials": {
+        "wordpressApi": {
+          "id": "QwVjLimOHcNrIgL9",
+          "name": "Wordpress account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{\n  JSON.stringify({\n    success: true,\n    postId: $node[\"Post on Wordpress\"].json.id,\n    postUrl: $node[\"Post on Wordpress\"].json.link,\n    featuredMediaId: $node[\"Upload media\"].json?.id ?? null\n  })\n}}\n",
+        "options": {}
+      },
+      "id": "3b6fe45b-d829-495a-8732-a4c3430b146d",
+      "name": "Respond: Success",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "position": [
+        3488,
+        192
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n 'formSubmittedText': 'There was a problem creating the article, please refresh the form and try again!'\n}\n\n",
+        "options": {}
+      },
+      "id": "7410b509-4bc3-4c0d-bb70-88fcaca8bb4a",
+      "name": "Respond: Error",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "position": [
+        1264,
+        448
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Chapters split",
+        "height": 370.512611879577,
+        "width": 225.47038972308582,
+        "color": 2
+      },
+      "id": "db57de96-2458-4939-9f22-afa12bd57126",
+      "name": "Sticky Note16",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1184,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "Splits out chapter contents from the previous node",
+        "height": 80,
+        "width": 185.6051460344073,
+        "color": 7
+      },
+      "id": "b64f9ef7-77c2-4dda-a089-9cbcc36c1e02",
+      "name": "Sticky Note17",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1200,
+        64
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "Writes the text for each chapter",
+        "height": 80,
+        "width": 287.370178643191,
+        "color": 7
+      },
+      "id": "a777781d-d7d3-4f99-8737-aaff1f7dfbae",
+      "name": "Sticky Note18",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1440,
+        64
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Chapters text",
+        "height": 370.512611879577,
+        "width": 333.40108076977657,
+        "color": 6
+      },
+      "id": "8fa7b15f-587c-4d3b-a492-795d076eb28c",
+      "name": "Sticky Note19",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1424,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Content preparation",
+        "height": 514.2177254645992,
+        "width": 420.4253447940705,
+        "color": 4
+      },
+      "id": "f4b3fe2b-7d73-4896-b22c-d407d38019b6",
+      "name": "Sticky Note21",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1792,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "Merges the content and prepare it before sending it to WordPress",
+        "height": 80,
+        "width": 368.1523541074699,
+        "color": 7
+      },
+      "id": "40b2b3e7-4299-4145-904d-400efff44c00",
+      "name": "Sticky Note22",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1808,
+        64
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "prompt": "=Generate a high-quality header image (1200x628) for the blog article titled: {{ $('Create post title and structure').first().json.message.content.title }}.\n\nScene rules:\n- Main focus: objects, workspace, or setting directly related to the exact main keyword.\n- Secondary details: modern office space, young creative European team (men/women) if relevant, or local context implied by the keyword (e.g., Dubai Marina skyline, Business Bay towers).\n- Composition: natural daylight, medium shot or close-up of desk/tools, realistic props that reflect the keyword.\n- Style: cinematic depth, subtle reflections, fingerprints on surfaces, slight sensor grain, no CGI look.\n- Depth of field: some objects partially cover parts of background text (title overlay effect).\n- Text overlay: place the exact article title smaller, in negative space (never on faces). If people are shown, the title should appear behind them to create depth.\n- Mood adapts to article goal:\n   * Educational → bright, clean, learning-focused\n   * Commercial → professional, trust-driven, corporate\n   * Local SEO → highlight location/landmark context\n   * Thought Leadership → modern, innovative, abstract vibes\n\nStrict rules:\n- No full faces or full bodies; cropped/team shots allowed if natural.\n- No watermarks, no logos, no glossy CGI, no oversharpening.\n- Must look like a real documentary-style photo prepared for a tech/SEO/digital marketing agency blog.\n",
+        "options": {
+          "dalleQuality": "standard",
+          "size": "1792x1024",
+          "style": "natural"
+        }
+      },
+      "id": "cb513877-891c-4f7a-8e2b-460e43569531",
+      "name": "Generate featured image",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "position": [
+        2624,
+        192
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "openAiApi": {
+          "id": "SSci8pJI9gKvs4gd",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "25edf907-7b57-496b-b725-eaa14cb63c4e",
+      "name": "Wikipedia",
+      "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
+      "position": [
+        624,
+        480
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o",
+          "mode": "id"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are an expert SEO writer (2025-ready). Return a SINGLE valid JSON object only.\n\nInput keywords: {{ Array.isArray($('Settings').item.json.keywords) ? $('Settings').item.json.keywords.join(', ') : $('Settings').item.json.keywords }}\n\nArticle Goal (Purpose): {{ $('Settings').item.json.goal }}\n\nRules & Goals (strict):\n- Plan a 2,200–2,500 word article for WordPress (HTML only, no markdown).\n- The entire structure, tone, level of detail, and CTA strength MUST be consistent with the provided Article Goal.\n   * If goal is \"Educational / Informative\" → prioritize clear explanations, examples, neutral tone, softer CTA.\n   * If goal is \"Commercial / Lead Generation\" → stronger CTA, emphasize HoccoTech services, persuasive wording.\n   * If goal is \"Local SEO Focus\" → emphasize location, maps, geo-intent, local customer benefits.\n   * If goal is \"Comparative / Analytical\" → emphasize data, comparisons, pros/cons lists.\n   * If goal is \"Thought Leadership\" → emphasize expertise, authority, predictions, case studies.\n- Main keyword = the most important of the input keywords.\n- intro/conclusions must be HTML (<p>, <strong>, <em>, <ul>, <ol> allowed).\n- No H2/H3 tags in chapter bodies here; chapter titles are plain text (H2 will be added later).\n- Keep meta_title <=60 chars and meta_description <=150 chars.\n- The \"meta_description\" MUST include a short CTA aligned with the Article Goal (tone varies by goal) and stay <=150 chars.\n- slug must be lowercase kebab-case and MUST contain the exact main keyword.\n- lsi_keywords must be an array of 5–10 strings.\n- External references across the whole article: MAX 3 authoritative links (Wikipedia or reputable studies).\n- Return ONLY JSON with EXACT keys.\n\nLANGUAGE POLICY (STRICT):\n- Detect the language of the exact main keyword from: {{ Array.isArray($('Settings').item.json.keywords) ? $('Settings').item.json.keywords[0] : $('Settings').item.json.keywords }}.\n- Write ALL textual fields (title, subtitle, introduction, conclusions, chapters[].prompt wording) in the SAME language as the main keyword.\n- If the keyword language is Persian/Arabic (RTL), write in RTL-friendly natural style (no English filler words).\n- If the keyword is Turkish or German (Latin script), write in that language (tr-TR or de-DE conventions).\n- If multiple languages are mixed, default to Persian (fa-IR).\n- Exception: \"imagePrompt\" MUST be written in English for better image quality.\n\nHEADINGS KEYWORD POLICY (STRICT):\n- H1 (title) must include the exact main keyword near the start.\n- The \"subtitle\" should reflect benefit/value; include a natural/partial use of the main keyword at most once.\n- For \"chapters\" titles (future H2s):\n  * Include the exact main keyword in 2–3 chapter titles.\n  * Use LSI/synonyms for the remaining chapter titles (no exact-match repetition).\n  * Do NOT place two H2s with the exact keyword back-to-back.\n  * Include at least one question-form H2 that contains the exact main keyword (e.g., \"How much does <main keyword> cost?\").\n  * Name the FAQ chapter as \"FAQs about <main keyword>\" (or the local-language equivalent).\n  * All chapter titles must be unique.\n\nIMAGE PROMPT RULES (STRICT):\n- The \"imagePrompt\" field must be a single-line scene description for a REAL photographic header image that tightly matches the exact main keyword and its user intent.\n- Include: main subject tied to the main keyword; real setting/location (use locale if implied); composition (rule of thirds or centered); framing (wide/medium/close-up); lighting (natural/available light, time of day); lens choice (35mm for environment, 50mm general, 85mm portrait); aperture f/2–f/4; 2–3 realistic props that instantly signal the keyword; intended mood (trust/professional/efficiency/innovation) matching search intent; copy-space position (left/right/top).\n- Add at the end: \"documentary-style photography, realistic, neutral color grade, subtle grain, no text, no watermark, no logos, not illustration, not CGI.\"\n- Keep concise: 1–2 sentences (≈30–80 words). No markdown.\n- Prefer close-up or medium framing of real objects on a desk; avoid showing full human faces or full bodies.\n- Add tiny real-world imperfections (subtle fingerprints on screens, minor dust, slightly imperfect paper edges), natural daylight, no HDR/dramatic lighting.\n\nMust return JSON with EXACT keys:\n{\n  \"title\": \"<H1 text (without tags)>\",\n  \"subtitle\": \"<sub headline (without tags)>\",\n  \"introduction\": \"<~150 words HTML intro>\",\n  \"conclusions\": \"<~150 words HTML conclusion with CTA>\",\n  \"imagePrompt\": \"<scene description per IMAGE PROMPT RULES>\",\n  \"meta_title\": \"<<=60 chars, includes main keyword, power word/number>\",\n  \"meta_description\": \"<<=150 chars, includes main keyword + CTA>\",\n  \"slug\": \"<kebab-case-slug-with-main-keyword>\",\n  \"lsi_keywords\": [\"<5–10 LSI/synonyms>\", \"...\"],\n  \"chapters\": [\n    {\"title\":\"Pricing & Packages for <focus keyword>\",\"prompt\":\"Insert ONLY ONE relevant TablePress shortcode (not HTML tables). Choose based on main topic: Website → [table id=1 /]; SEO → [table id=2 /]; Local SEO → [table id=5 /]; Backlinks → [table id=3 /]; Monthly SEO Report → [table id=4 /]. Add a brief WH-answer around it; no unrelated pricing.\",\"is_first\": true},\n    {\"title\":\"How Much Does <focus keyword> Cost?\",\"prompt\":\"Directly address cost ranges, what affects price, and how to decide the right tier based on goals and timeline (no raw prices; conceptual guidance).\",\"is_first\": false},\n    {\"title\":\"GEO & AI-driven SEO (2025) Innovations\",\"prompt\":\"Generative SEO, AI overviews, local/global search trends and their impact on discoverability.\",\"is_first\": false},\n    {\"title\":\"Choosing the Right Agency for <focus keyword>\",\"prompt\":\"Checklist, red flags, realistic guarantees, due diligence steps, and why HoccoTech is trusted.\",\"is_first\": false},\n    {\"title\":\"How We Can Help (HoccoTech)\",\"prompt\":\"Highlight differentiators: multilingual websites, advanced SEO, CRO, international targeting, security/firewall, WhatsApp/Chat, proven projects, transparent pricing. Add strong CTA.\",\"is_first\": false},\n    {\"title\":\"FAQs about <focus keyword>\",\"prompt\":\"At least 6 Q&A, 80–120 words each. Generate valid JSON-LD FAQ schema at the end.\",\"is_first\": false}\n  ]\n}\n\nIMPORTANT:\n- Do NOT output “Meta Title”, “Meta Description”, “Slug”, or “LSI Keywords” as visible content. Only fields in JSON.\n- No markdown. Return ONLY JSON.\n"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {
+          "maxTokens": 2400
+        }
+      },
+      "id": "b86585b3-6461-485b-999c-7ae089405a7f",
+      "name": "Create post title and structure",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "position": [
+        544,
+        192
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "openAiApi": {
+          "id": "SSci8pJI9gKvs4gd",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-5",
+          "mode": "list",
+          "cachedResultName": "GPT-5"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=Write a chapter for the article: {{ $('Create post title and structure').first().json.message.content.title }}, {{ $('Create post title and structure').first().json.message.content.subtitle }}, that targets the main keyword: {{ $('Settings').item.json.keywords }}.\n\nArticle Goal (Purpose): {{ $('Settings').item.json.goal }}\n\nThis is the prompt for the current chapter titled {{ $json.title }}: {{ $json.prompt }}.\n\nGlobal constraints (STRICT):\n- ALL content in this chapter must align with the overall Article Goal. \n   * If goal = \"Educational / Informative\": prioritize clarity, neutral explanations, actionable tips, minimal promotional tone.\n   * If goal = \"Commercial / Lead Generation\": emphasize persuasive tone, stronger CTAs, highlight HoccoTech services, lead-gen focus.\n   * If goal = \"Local SEO Focus\": emphasize local context, geography, maps, benefits for local businesses/customers.\n   * If goal = \"Comparative / Analytical\": emphasize data, comparisons, pros/cons, research-driven insights.\n   * If goal = \"Thought Leadership\": emphasize authority, predictions, case studies, visionary insights.\n- Write the entire chapter in the SAME language as the exact focus keyword (“{{ $('Settings').item.json.keywords }}”). Use locale conventions if Turkish or German (tr-TR, de-DE).\n- If the focus keyword is Persian/Arabic (RTL), use RTL-appropriate punctuation, numerals, and phrasing (no English filler).\n- Aim for ~1.5–2.5% keyword density (natural). The exact focus keyword (“{{ $('Settings').item.json.keywords }}”) MUST appear at least once in EVERY paragraph.\n- Ensure the exact focus keyword appears in at least ONE <h3> subheading in this chapter.\n- Weave in these LSI terms where natural: {{ $('Create post title and structure').first().json.message.content.lsi_keywords.join(', ') }}.\n- PURE HTML only: <p>, <h3>, <ul>, <ol>, <strong>, <em>, <blockquote>, <a>.\n- Do NOT add <h2>. You MAY use 2–3 <h3> subheadings.\n- Paragraphs should be 4–5 lines each. Include a bullet or numbered list for takeaways.\n- Target length per chapter ≈ {{ Math.round( ( $('Settings').item.json.words - 220 ) / $('Settings').item.json.chapters ) }} words.\n- Strengthen E-E-A-T. Use authoritative external references ONLY if strictly relevant. The WHOLE article must include at most 3 external links total.\n- Link policy by chapter (to satisfy SEO checks):\n  * For \"GEO & AI-driven SEO (2025)\": include EXACTLY ONE authoritative external link as DOFOLLOW (no rel=\"nofollow\"; you MAY include rel=\"noopener\").\n  * For \"Choosing the Right Agency\": include EXACTLY ONE authoritative external link as DOFOLLOW (no rel=\"nofollow\"; you MAY include rel=\"noopener\").\n  * For \"Factors Influencing <focus keyword> Cost\": include AT MOST ONE authoritative external link as DOFOLLOW only if citing a stat/report.\n  * For other chapters (including Pricing & Packages, How We Can Help, and FAQs): NO external links.\n- NEVER output or mention “Meta Title”, “Meta Description”, “Slug”, or “LSI Keywords” as a visible list/report.\n- The exact focus keyword (“{{ $('Settings').item.json.keywords }}”) MUST appear:\n  * at least once in the FIRST paragraph of this chapter,\n  * at least once in the LAST paragraph of this chapter,\n  * and at least once per every ~120 words of this chapter (natural placement).\n\nSpecial rules:\n- If {{ $json.is_first || false }} is true, prepend:\n  <p class=\"answer-snippet\"><strong>Answer:</strong> one or two sentences that directly answer the main query using the exact focus keyword.</p>\n\n- Pricing & Packages (TablePress):\n  * Insert ONLY ONE matching TablePress shortcode and NO raw <table>, NO raw prices:\n    - Website → [table id=1 /]\n    - SEO → [table id=2 /]\n    - Local SEO → [table id=5 /]\n    - Backlinks → [table id=3 /]\n    - Monthly SEO report → [table id=4 /]\n  * Add a concise WH-tip (1–2 sentences) before/after the shortcode to answer “how much / how to choose”.\n\n- \"How We Can Help (HoccoTech)\":\n  * Highlight differentiators: multilingual websites, advanced SEO, CRO, international targeting, high security/firewall, WhatsApp/Chat integration, proven global projects, transparent pricing.\n  * End with this CTA (tone/strength may vary depending on Article Goal):\n    <p><strong>Contact us today</strong> to discuss your project and get a free consultation with HoccoTech experts.</p>\n\nFAQ MODE (STRICT):\n- If the current chapter title indicates FAQs (match case-insensitive on: \"FAQ\", \"FAQs\", \"Frequently Asked Questions\", \"سوالات متداول\", \"پرسش‌های متداول\"), then IGNORE the generic chapter length target and DO the following:\n  1) Write 6–8 Q&A blocks. Each answer must be 80–120 words and use the exact focus keyword naturally (no stuffing).\n  2) Structure:\n     - Use <h3> for each question. Include the exact focus keyword in at least 2 of the <h3> questions.\n     - Use <p> for each answer. Keep paragraphs 4–5 lines. No external links in FAQ.\n  3) After ALL Q&A blocks, append a valid JSON-LD schema for FAQPage inside:\n     <script type=\"application/ld+json\">{ ... }</script>\n     Rules for JSON-LD (STRICT):\n     - Use double quotes only, valid JSON, no trailing commas, no HTML escaping of quotes.\n     - Structure:\n       {\n         \"@context\": \"https://schema.org\",\n         \"@type\": \"FAQPage\",\n         \"mainEntity\": [\n           {\n             \"@type\": \"Question\",\n             \"name\": \"<Question 1 text exactly as shown in the <h3>>\",\n             \"acceptedAnswer\": {\n               \"@type\": \"Answer\",\n               \"text\": \"<Answer 1 text exactly as shown in the <p>, keep HTML tags if used>\"\n             }\n           }\n         ]\n       }\n     - Ensure the text values in JSON-LD match the visible Q&A above (1:1). \n     - Do not include any links in the JSON-LD; plain text only.\n"
+            }
+          ]
+        },
+        "options": {
+          "maxTokens": 6000
+        }
+      },
+      "id": "b47dd4b0-8f1c-470d-9660-96dd04abebd5",
+      "name": "Create chapters text",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "position": [
+        1472,
+        192
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "openAiApi": {
+          "id": "SSci8pJI9gKvs4gd",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWikipedia is used to write the article",
+        "height": 275.3956890735875,
+        "width": 319.8306137081817,
+        "color": 7
+      },
+      "id": "f6347c74-48a6-4c8e-b236-9090728bc6ef",
+      "name": "Sticky Note7",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        512,
+        400
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('Settings').first().json.wordpress_url.replace(/\\/$/,'') + \"/wp-json/wp/v2/media/\" + $json.id }}\n",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"alt_text\": \"{{ Array.isArray($('Settings').first().json.keywords) ? $('Settings').first().json.keywords[0] : $('Settings').first().json.keywords }}\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3008,
+        192
+      ],
+      "id": "506c69e0-f2e6-4ba1-aae2-f2aa4812c0e8",
+      "name": "Set media alt text",
+      "credentials": {
+        "wordpressApi": {
+          "id": "QwVjLimOHcNrIgL9",
+          "name": "Wordpress account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Form": {
+      "main": [
+        [
+          {
+            "node": "Settings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Settings": {
+      "main": [
+        [
+          {
+            "node": "Create post title and structure",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wikipedia": {
+      "ai_tool": [
+        []
+      ]
+    },
+    "Upload media": {
+      "main": [
+        [
+          {
+            "node": "Set media alt text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Post on Wordpress": {
+      "main": [
+        [
+          {
+            "node": "Generate featured image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Final article text": {
+      "main": [
+        [
+          {
+            "node": "Post on Wordpress",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split out chapters": {
+      "main": [
+        [
+          {
+            "node": "Merge chapters title and text",
+            "type": "main",
+            "index": 1
+          },
+          {
+            "node": "Create chapters text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create chapters text": {
+      "main": [
+        [
+          {
+            "node": "Merge chapters title and text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check data consistency": {
+      "main": [
+        [
+          {
+            "node": "Split out chapters",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Respond: Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate featured image": {
+      "main": [
+        [
+          {
+            "node": "Upload media",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set image ID for the post": {
+      "main": [
+        [
+          {
+            "node": "Respond: Success",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge chapters title and text": {
+      "main": [
+        [
+          {
+            "node": "Final article text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create post title and structure": {
+      "main": [
+        [
+          {
+            "node": "Check data consistency",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set media alt text": {
+      "main": [
+        [
+          {
+            "node": "Set image ID for the post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "4e1dd41f-4efa-440e-8a03-d6297128ac1b",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8523eb7672002923a9bc814837ec6de70767b35ae804d7e80f6d27d41e2de65d"
+  },
+  "id": "vwzAqmEM38uOYtQT",
+  "tags": []
+}
